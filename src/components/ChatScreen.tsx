@@ -11,7 +11,7 @@ interface ChatScreenProps {
 
 function findLastMessageTime(messages: Message[]): string {
   for (let index = messages.length - 1; index >= 0; index -= 1) {
-    if (messages[index]?.time) return messages[index].time;
+    if (messages[index]?.time) return messages[index].time!;
   }
 
   return "18:35";
